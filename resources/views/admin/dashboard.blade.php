@@ -33,6 +33,19 @@
                             </div>
                         </div>
                     @endif
+                    {{-- user --}}
+                    @if(auth()->user()->role == 1)
+                        <div class="col-lg-4  col-6">
+                            <div class="small-box purplebg-info bg-info">
+                                <div class="inner">
+                                    <h3>{{$blogCount}}</h3>
+                                    <p>blogs</p>
+                                </div>
+                                <a href="{{route('user.blog')}}" class="small-box-footer">More info <i
+                                        class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    @endif
                 </div>
 
             </div>
